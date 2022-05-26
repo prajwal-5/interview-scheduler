@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/core.css' %} " > 
+
+    <title>Interview Management</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center alert alert-success">Interview Scheduling Application</h2>
+        {% block content %}{% endblock content %}
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+</html>

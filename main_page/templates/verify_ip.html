@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row offset-4 col-sm-4">
+    <h2 class="text-center alert alert-info">Verify your E-mail</h2>
+    {% if messages %}
+        {% for message in messages %}
+
+        <div {% if message.tags %} class="alert alert-{{message.tags}} alert-dismissible fade show"{% endif %} role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        {% endfor %}
+    {% endif %}
+    <form action="#" method="POST" class="mb-2">
+        {% csrf_token %}
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <div class="mt-2 mb-3">
+                <input type="email" class="form-control " name="emailtocheck" aria-describedby="emailHelp" placeholder="Enter email">
+                <small>Please enter your registered E-mail address</small>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-success">Check</button>
+            <a href={% url 'home' %} class="btn btn-info my-2 mx-2">Back to home</a>
+    </form>
+</div>
+
+{% endblock content %}
