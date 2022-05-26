@@ -1,4 +1,4 @@
-# CRUD Project
+# Interview Scheduler Project
 
 ### This is a single page interview scheduling application powered by Django as backend and uses SQLite3 database for development and demonstrates Many to many relationship between interview and participant table. It also takes care of cases of multiple scheduled interviews and the correct set of participants selected at the correct time while editing too. 
 
@@ -61,4 +61,4 @@
 ![participant table details](resources/participant-details.PNG)
 
 
-Suggestions are welcome.
+Hope you like it. Suggestions are welcome.
